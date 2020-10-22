@@ -1,0 +1,13 @@
+atomicwrites
+attrs
+colorama
+iniconfig
+packaging
+pluggy
+py
+pyparsing
+pytest
+selenium
+six
+toml
+urllib3
