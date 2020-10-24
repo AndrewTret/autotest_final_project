@@ -1,5 +1,13 @@
+from .pages.main_page import MainPage
+from .pages.login_page import LoginPage
+
+
 def test_guest_can_go_to_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"
-    browser.get(link)
-    login_link = browser.find_element_by_css_selector("#login_link")
-    login_link.click()
+    main_page = MainPage(browser, link)
+    login_page = LoginPage(browser, link)
+    main_page.open()
+    main_page.go_to_login_page()
+    main_page.should_be_login_link()
+    login_page.should_be_login_url()
+
