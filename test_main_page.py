@@ -9,8 +9,7 @@ link = "http://selenium1py.pythonanywhere.com/"
 
 @pytest.mark.login_guest
 class TestLoginFormMainPage:
-    # @pytest.fixture(scope="function", autouse=True)
-    # def setup(self):
+    link = "http://selenium1py.pythonanywhere.com/"
 
     def test_guest_can_go_to_login_page(self, browser):
         page = BasePage(browser, self.link)
